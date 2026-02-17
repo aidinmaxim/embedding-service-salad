@@ -49,7 +49,7 @@ Then: `curl http://localhost:8001/health` and `curl -X POST http://localhost:800
 
 5. **Deploy** and note the Container Gateway URL (e.g. `https://xxx.salad.cloud`).
 
-6. **Backend config**: In your app (e.g. meindeal-backend), set:
+6. **Backend config**: In your app, set:
    ```env
    EMBEDDING_SERVICE_URL=https://<your-gateway>.salad.cloud
    ```
@@ -59,6 +59,17 @@ Then: `curl http://localhost:8001/health` and `curl -X POST http://localhost:800
 
 - `MODEL_NAME` — sentence-transformers model (default: `paraphrase-multilingual-mpnet-base-v2`, 768d).
 - `MAX_TEXT_LENGTH` — max characters per text, truncation (default: `512`).
+
+## Publish to GitHub
+
+1. Create a new repository on GitHub (e.g. `embedding-service-salad`, public).
+2. Add remote and push:
+
+```bash
+cd /path/to/embedding-service-salad
+git remote add origin https://github.com/YOUR_USERNAME/embedding-service-salad.git
+git push -u origin main
+```
 
 ## Reference
 
