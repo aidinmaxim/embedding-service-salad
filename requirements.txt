@@ -1,0 +1,4 @@
+# Base image provides torch with CUDA; only add app deps and sentence-transformers
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+sentence-transformers==3.3.1
